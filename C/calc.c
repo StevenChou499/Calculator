@@ -1,16 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "calc.h"
 
-#define MAX_CHAR_LEN 100
+// convert the user input inorder expression into postorder
+void inorder_to_postorder(char *expression, unsigned int length);
 
-int main(void)
-{
-    char *str = malloc(sizeof(char) * MAX_CHAR_LEN);
-    printf("Please enter the numbers you want to calculate: ");
-    scanf("%s", str);
-    printf("You entered %s\n", str);
-
-    free(str);
-
-    return 0;
-}
+// calculate the actual answer via the post-order expression
+result_t calculate_answer(char *post_expression);
