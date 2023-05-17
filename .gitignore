@@ -1,0 +1,8 @@
+# All the vscode settings
+.vscode/*
+
+# All the executable for Windows
+/C/*.exe
+
+# The executable for Linux
+/C/calc
