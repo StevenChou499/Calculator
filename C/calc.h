@@ -13,7 +13,6 @@ typedef struct result {
 enum number_mode {
     NOT_A_NUMBER   = 0,
     INTEGER        = 1,
-    FLOATING_POINT = 2
 };
 
 // convert the user input inorder expression into postorder
