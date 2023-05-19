@@ -15,6 +15,9 @@ enum number_mode {
     INTEGER        = 1,
 };
 
+// parse the user inputed expression
+unsigned int parse_expression(char *expression);
+
 // convert the user input inorder expression into postorder
 void inorder_to_postorder(char *expression, unsigned int length);
 
