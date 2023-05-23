@@ -7,6 +7,12 @@ int main(void)
     scanf("%s", str);
     printf("You entered %s\n", str);
 
+    inorder_to_postorder(str, 3);
+
+    double result = calculate_answer(str);
+
+    printf("The answer is %f\n", result);
+
     free(str);
 
     return 0;

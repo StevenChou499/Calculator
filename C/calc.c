@@ -25,6 +25,7 @@ void inorder_to_postorder(char *expression, unsigned int length)
                 break;
             default:
                 operand[operand_index] = *expression;
+                operand_index++;
                 break;
         }
         expression++;
@@ -32,4 +33,34 @@ void inorder_to_postorder(char *expression, unsigned int length)
 }
 
 // calculate the actual answer via the post-order expression
-result_t calculate_answer(char *post_expression);
+double calculate_answer(char *post_expression)
+{
+    double result = 0;
+    unsigned int post_index = 0U;
+
+    while (*post_expression) {
+        switch (*post_expression) {
+            case '+':
+                result += *post_expression;
+                post_index++;
+                break;
+            case '-':
+                result += *post_expression;
+                post_index++;
+                break;
+            case '*':
+                result *= *post_expression;
+                post_index++;
+                break;
+            case '/':
+                result /= *post_expression;
+                post_index++;
+                break;
+            default:
+                result = *post_expression;
+                post_index++;
+                break;
+        }
+    }
+    return result;
+}
